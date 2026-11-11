@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Programming Examples</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>Programming Examples</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; Programming Introduction</p>
+<h2>1. Connect and Identify the Instrument</h2>
+<pre>*IDN?
+&gt; GoLight,G2004A,XXXXXXXXX,V1.0.0.1</pre>
+<h2>2. Start Acquisition and Wait for Completion</h2>
+<pre>:ACQuire:RUN
+*OPC?</pre>
+<h2>3. Configure and Query a Channel</h2>
+<pre>:CHANnel1A:DISPlay ON
+:CHANnel1A:DISPlay?
+&gt; 1</pre>
+<h2>4. Install a TDECQ Measurement and Read the Result</h2>
+<pre>:MEASure:EYE:TDEQ
+:MEASure:EYE:TDEQ?
+&gt; 3.4</pre>
+<h2>5. Save a Waveform File</h2>
+<pre>:DISK:WAVeform:FNAMe "%USER_DATA_DIR%\Waveforms\eye"
+:DISK:WAVeform:SAVE:SOURce CHANnel1A
+:DISK:WAVeform:SAVE:FTYPe WYValues
+:DISK:WAVeform:SAVE</pre>
+<p class="nav"><a href="../../index.html">Home</a> &middot; <a href="../a_introduction.html">&larr; Back to Programming Introduction</a></p>
+</body>
+</html>

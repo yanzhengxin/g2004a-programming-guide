@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Queries</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>Queries</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; Programming Introduction</p>
+<p>Add a question mark (<code>?</code>) to the end of a command to query the current setting or measurement result. A query returns an ASCII string.</p>
+<h2>Return Types</h2>
+<table>
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td>ASCII integer</td><td>Decimal integer; boolean values are returned as 1 / 0</td></tr>
+<tr><td>ASCII float</td><td>Decimal floating-point number, possibly in scientific notation</td></tr>
+<tr><td>ASCII enumeration string</td><td>Returns the option keyword (short form), e.g. <code>MIN</code></td></tr>
+<tr><td>ASCII comma-separated string</td><td>Multiple values separated by commas (e.g. the <code>*IDN?</code> response)</td></tr>
+</table>
+<h2>VSET? Queries</h2>
+<p>Some commands support the <code>:VSET?</code> suffix, which returns the comma-separated list of all values currently available for that parameter. For example:</p>
+<pre>:CHANnel1A:FSELect:RATe:VSET?</pre>
+<p class="nav"><a href="../../index.html">Home</a> &middot; <a href="../a_introduction.html">&larr; Back to Programming Introduction</a></p>
+</body>
+</html>

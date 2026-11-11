@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:PAM:ELEVel</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:PAM:ELEVel</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../a_introduction.html">Command Reference</a> &rsaquo; <a href="a_introduction.html">MEASure Subsystem</a></p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:EYE:PAM:ELEVel</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:PAM:ELEVel?</pre>
+<h2>Description</h2>
+<p>Starts Eye mode's Eye PAM4 Level measurement where the center amplitude of the selected eye (vertical center) of a PAM signal is measured. Select the eye to be measured using the :MEASure:EYE:PAM:ELEVel:EYE child command. To measure the eye levels for all of the eyes on a PAM4 signal, you must send this command once for each eye as there is no command for simultaneously measuring all eye levels. The query form of the command returns the measured value.</p>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII float (V)</td></tr><tr><td>Typical Return Value</td><td><code>1.50E-1</code></td></tr></table>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+</body>
+</html>

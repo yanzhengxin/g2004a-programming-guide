@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SCPI Basics</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>SCPI Basics</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; Programming Introduction</p>
+<p>SCPI (Standard Commands for Programmable Instruments) defines a standardized syntax for controlling test and measurement instruments. The G2004A command set follows the SCPI standard.</p>
+<h2>Command Tree Structure</h2>
+<p>SCPI commands use a tree structure, with keywords separated by colons (<code>:</code>). For example:</p>
+<pre>:CHANnel{1}{A|B|C|D}:DISPlay {ON | OFF | 1 | 0}</pre>
+<p>Here <code>CHANnel</code> is the root keyword (subsystem), and <code>DISPlay</code> is the leaf keyword.</p>
+<h2>Long Form and Short Form</h2>
+<p>SCPI keywords are case-insensitive. Uppercase letters indicate the short form; the lowercase letters complete the long form. For example, <code>DISPlay</code> can be written as <code>DISP</code>, and both are equivalent.</p>
+<h2>Command Types</h2>
+<ul>
+<li><strong>Setting commands</strong>: set an instrument parameter, e.g. <code>:CHANnel1A:DISPlay ON</code>.</li>
+<li><strong>Query commands</strong>: end with a question mark (<code>?</code>) and return the current setting or measurement, e.g. <code>:CHANnel1A:DISPlay?</code>.</li>
+</ul>
+<p><a href="command_syntax.html">Next: Command Syntax Conventions &rarr;</a></p>
+<p class="nav"><a href="../../index.html">Home</a> &middot; <a href="../a_introduction.html">&larr; Back to Programming Introduction</a></p>
+</body>
+</html>

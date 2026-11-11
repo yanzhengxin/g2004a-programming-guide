@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>IEEE 488.2 Common Commands</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>IEEE 488.2 Common Commands</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; Programming Introduction</p>
+<p>Common commands begin with an asterisk (<code>*</code>), follow the IEEE 488.2 standard, and are independent of the SCPI subsystems. The G2004A supports the following common commands:</p>
+<table>
+<tr><th>Command</th><th>Description</th></tr>
+<tr><td><code>*IDN?</code></td><td>Returns the instrument identification string (manufacturer, model, serial number, firmware version)</td></tr>
+<tr><td><code>*OPC?</code></td><td>Returns 1 after prior operations complete (blocking synchronization)</td></tr>
+</table>
+<p>The G2004A <code>*IDN?</code> response format is:</p>
+<pre>GoLight,G2004A,XXXXXXXXX,V1.0.0.1</pre>
+<p><a href="../Commands/Common/a_introduction.html">See the common command details &rarr;</a></p>
+<p class="nav"><a href="../../index.html">Home</a> &middot; <a href="../a_introduction.html">&larr; Back to Programming Introduction</a></p>
+</body>
+</html>

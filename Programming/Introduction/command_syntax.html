@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Command Syntax Conventions</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>Command Syntax Conventions</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; Programming Introduction</p>
+<p>This guide uses the following notation conventions when describing commands:</p>
+<table>
+<tr><th>Symbol</th><th>Meaning</th><th>Example</th></tr>
+<tr><td><code>&lt; &gt;</code></td><td>Required parameter (replace the text inside with a value or string)</td><td><code>&lt;gain&gt;</code></td></tr>
+<tr><td><code>{ }</code></td><td>Enumeration parameter; the braces enclose the choices</td><td><code>{ON | OFF | 1 | 0}</code></td></tr>
+<tr><td><code>|</code></td><td>Separates mutually exclusive choices</td><td><code>ON | OFF</code></td></tr>
+<tr><td><code>1</code> / <code>A|B|C|D</code></td><td>Channel slot number / channel letter range (inside braces)</td><td><code>CHANnel{1}{A|B|C|D}</code></td></tr>
+<tr><td><code>?</code></td><td>Query suffix that turns a setting command into a query</td><td><code>:DISPlay?</code></td></tr>
+<tr><td>Uppercase letters</td><td>Short form keyword (the full form includes the lowercase part)</td><td><code>DISPlay</code> = <code>DISP</code></td></tr>
+</table>
+<h2>Example</h2>
+<pre>:CHANnel1A:TRANsducer:GAIN 2.000</pre>
+<p>Sets the external transducer gain of channel 1A to 2.000.</p>
+<p class="nav"><a href="../../index.html">Home</a> &middot; <a href="../a_introduction.html">&larr; Back to Programming Introduction</a></p>
+</body>
+</html>
