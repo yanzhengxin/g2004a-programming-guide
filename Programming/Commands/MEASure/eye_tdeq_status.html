@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:TDEQ:STATus?</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:TDEQ:STATus?</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:TDEQ:STATus?</pre>
+<h2>Description</h2>
+<p>Queries the status of the (:MEASure:EYE:TDEQ) measurement.</p>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>{CORR | INV | QUES}</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:EYE:LIST:CLEar
+:MEASure:EYE:TDEQ:SOURce FUNC1
+:MEASure:EYE:TDEQ
+:MEASure:EYE:TDEQ?
+:MEASure:EYE:TDEQ:STATus?
+:MEASure:EYE:TDEQ:SOURce CHAN1B
+:MEASure:EYE:TDEQ
+:MEASure:EYE:TDEQ?
+:MEASure:EYE:TDEQ:STATus?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="eye_tdeq.html">:MEASure:EYE:TDEQ</a></li>
+<li><a href="eye_tdeq_source.html">:MEASure:EYE:TDEQ:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

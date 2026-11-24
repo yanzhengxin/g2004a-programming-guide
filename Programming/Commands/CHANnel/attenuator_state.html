@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:CHANnel{1}{A|B|C|D}:ATTenuator:STATe</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:CHANnel{1}{A|B|C|D}:ATTenuator:STATe</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; CHANnel Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:CHANnel{1}{A|B|C|D}:ATTenuator:STATe {OFF | ON}</pre>
+<h2>Query Syntax</h2>
+<pre>:CHANnel{1}{A|B|C|D}:ATTenuator:STATe?</pre>
+<h2>Description</h2>
+<p>Turns on and off compensation for external attenuator in the test setup. This allows G2004 to report measurement values as if the measurements were made before the attenuator rather than at the oscilloscope's channel input.</p>
+<h2>Parameters</h2>
+<pre>{OFF | ON}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII integer (int, boolean)</td></tr><tr><td>Typical Return Value</td><td><code>1 (on) or 0 (off)</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:CHAN1B:ATTenuator:STATe ON
+:CHAN1B:ATTenuator:STATe?
+:CHAN1B:ATTenuator:DECibels 3.00
+:CHAN1B:ATTenuator:DECibels?
+:CHAN1B:ATTenuator:STATe OFF
+:CHAN1B:ATTenuator:STATe?
+:CHAN1B:ATTenuator:STATe ON
+:CHAN1B:ATTenuator:STATe?
+:CHAN1B:ATTenuator:DECibels?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="attenuator_decibels.html">:CHANnel{1}{A|B|C|D}:ATTenuator:DECibels</a></li>
+<li><a href="attenuator_ratio.html">:CHANnel{1}{A|B|C|D}:ATTenuator:RATio</a></li>
+<li><a href="attenuator_reset.html">:CHANnel{1}{A|B|C|D}:ATTenuator:RESet</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">CHANnel Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

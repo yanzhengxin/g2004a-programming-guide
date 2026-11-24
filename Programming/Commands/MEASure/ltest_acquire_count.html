@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:LTESt:ACQuire:COUNt?</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:LTESt:ACQuire:COUNt?</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Query Syntax</h2>
+<pre>:MEASure:LTESt:ACQuire:COUNt?</pre>
+<h2>Description</h2>
+<p>Use this query to return the current waveforms, patterns, or samples counted when a waveform, pattern, or samples acquisition limit test is enabled</p>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII integer (int)</td></tr><tr><td>Typical Return Value</td><td><code>&lt;number&gt;</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:LTESt:ACQuire:CTYPe:PATTerns 3
+:LTESt:ACQuire:CTYPe:PATTerns?
+:LTESt:ACQuire:STATe ON
+:LTESt:ACQuire:STATe?
+:ACQuire:RUN
+*OPC?
+:MEASure:LTESt:ACQuire:COUNt?</pre>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

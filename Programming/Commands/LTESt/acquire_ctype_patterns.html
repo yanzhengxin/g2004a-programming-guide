@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:LTESt:ACQuire:CTYPe:PATTerns</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:LTESt:ACQuire:CTYPe:PATTerns</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; LTESt Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:LTESt:ACQuire:CTYPe:PATTerns &lt;number&gt;</pre>
+<h2>Query Syntax</h2>
+<pre>:LTESt:ACQuire:CTYPe:PATTerns?</pre>
+<h2>Description</h2>
+<p>Enters the number of patterns required to stop an acquisition limit test that is based on patterns. Use the :LTESt:ACQuire:CTYPe command to select to test based on patterns.</p>
+<h2>Parameters</h2>
+<pre>&lt;number&gt;</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Typical Return Value</td><td><code>LTESt</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:LTESt:ACQuire:CTYPe:PATTerns 3
+:LTESt:ACQuire:CTYPe:PATTerns?
+:LTESt:ACQuire:STATe ON
+:LTESt:ACQuire:STATe?
+:ACQuire:RUN
+*OPC?
+:MEASure:LTESt:ACQuire:COUNt?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="acquire_ctype.html">:LTESt:ACQuire:CTYPe</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">LTESt Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

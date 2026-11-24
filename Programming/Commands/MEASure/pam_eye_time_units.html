@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:PAM:EYE:TIME:UNITs</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:PAM:EYE:TIME:UNITs</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:PAM:EYE:TIME:UNITs {SECond | UINTerval}</pre>
+<h2>Description</h2>
+Sets the time units for PAM4 width and skew measurements. The units can be seconds (SECond) or unit interval (UINTerval).<br>
+The following measurements are affected by this setting:<br>
+<br>
+EyeMode<br>
+• PAM Level Skews (:EYE:PAM:SKEW)<br>
+• PAM Eye Skews (:EYE:PAM:ESKew)<br>
+• PAM Eye Widths (:EYE:PAM:EWIDth)
+<h2>Unit Conversion</h2>
+<p>The <code>SECond</code> and <code>UINTerval</code> settings express the same
+measurement in two different units, related by the symbol (baud) rate:</p>
+
+<pre>1 UI = 1 / baud rate
+time (s) = UI x (1 / baud rate)
+UI = time (s) x baud rate</pre>
+
+<p>For a 106.5625 GBd PAM4 signal:</p>
+
+<pre>1 UI = 1 / 106.5625 x 10^9 s = 9.384 ps</pre>
+
+<table>
+<tr><th>UI</th><th>Time (ps)</th></tr>
+<tr><td>0.25 UI</td><td>2.346 ps</td></tr>
+<tr><td>0.50 UI</td><td>4.692 ps</td></tr>
+<tr><td>0.75 UI</td><td>7.038 ps</td></tr>
+<tr><td>1.00 UI</td><td>9.384 ps</td></tr>
+</table>
+
+<p>To convert between the two units:</p>
+
+<pre>UI -> ps: multiply by 9.384
+ps -> UI: divide by 9.384</pre>
+
+<p>Note: For a PAM4 signal each symbol carries 2 bits, so the symbol rate is
+106.5625 GBd and the bit rate is 213.125 Gb/s. The unit interva
+<h2>Parameters</h2>
+<pre>{SECond | UINTerval}</pre>
+<h2>Programming Example</h2>
+<pre>:MEASure:PAM:EYE:TIME:UNITs UINTerval
+:MEASure:PAM:EYE:TIME:UNITs?
+:MEASure:EYE:PAM:SKEW:LEVel LEVel0
+:MEASure:EYE:PAM:SKEW
+:MEASure:EYE:PAM:SKEW?
+:MEASure:EYE:PAM:ESKew:EYE EYE1
+:MEASure:EYE:PAM:ESKew
+:MEASure:EYE:PAM:ESKew?
+:MEASure:EYE:PAM:EWIDth:EYE EYE0
+:MEASure:EYE:PAM:EWIDth
+:MEASure:EYE:PAM:EWIDth?
+:MEASure:PAM:EYE:TIME:UNITs SECond
+:MEASure:PAM:EYE:TIME:UNITs?
+:MEASure:EYE:PAM:SKEW?
+:MEASure:EYE:PAM:ESKew?
+:MEASure:EYE:PAM:EWIDth?</pre>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

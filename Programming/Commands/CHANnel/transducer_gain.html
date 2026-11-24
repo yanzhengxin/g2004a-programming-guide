@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:CHANnel{1}{A|B|C|D}:TRANsducer:GAIN</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:CHANnel{1}{A|B|C|D}:TRANsducer:GAIN</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; CHANnel Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:CHANnel{1}{A|B|C|D}:TRANsducer:GAIN &lt;gain&gt;</pre>
+<h2>Query Syntax</h2>
+<pre>:CHANnel{1}{A|B|C|D}:TRANsducer:GAIN?</pre>
+<h2>Description</h2>
+<p>Enters or queries the gain setting for an external transducer.A query of :CHANnel:TRANsducer:GAIN? always returns a positive value even if negative transducer gain is indicated with the :CHANnel:TRANsducer:INVert command.</p>
+<h2>Parameters</h2>
+<pre>&lt;gain&gt;</pre>
+<h2>Programming Example</h2>
+<pre>:CHAN1B:TRANsducer:STATe ON
+:CHAN1B:TRANsducer:STATe?
+:CHAN1B:TRANsducer:INVert ON
+:CHAN1B:TRANsducer:INVert?
+:CHAN1B:TRANsducer:UNITs WATT
+:CHAN1B:TRANsducer:UNITs?
+:CHAN1B:TRANsducer:GAIN 1.000
+:CHAN1B:TRANsducer:GAIN?
+:CHAN1B:TRANsducer:OFFSet 2.000E-6
+:CHAN1B:TRANsducer:OFFSet?
+:CHAN1B:TRANsducer:INVert OFF
+:CHAN1B:TRANsducer:INVert?
+:CHAN1B:TRANsducer:GAIN 2.000
+:CHAN1B:TRANsducer:GAIN?
+:CHAN1B:TRANsducer:OFFSet 6.000E-6
+:CHAN1B:TRANsducer:OFFSet?
+:CHAN1B:TRANsducer:STATe OFF
+:CHAN1B:TRANsducer:STATe?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="transducer_invert.html">:CHANnel{1}{A|B|C|D}:TRANsducer:INVert</a></li>
+<li><a href="transducer_offset.html">:CHANnel{1}{A|B|C|D}:TRANsducer:OFFSet</a></li>
+<li><a href="transducer_state.html">:CHANnel{1}{A|B|C|D}:TRANsducer:STATe</a></li>
+<li><a href="transducer_units.html">:CHANnel{1}{A|B|C|D}:TRANsducer:UNITs</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">CHANnel Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

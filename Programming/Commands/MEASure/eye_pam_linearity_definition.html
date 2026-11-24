@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:PAM:LINearity:DEFinition</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:PAM:LINearity:DEFinition</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:EYE:PAM:LINearity:DEFinition {RLMA120 | RLMC94 | EYE}</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:PAM:LINearity:DEFinition?</pre>
+<h2>Description</h2>
+Selects the algorithm used to measure RML (Ratio Level Mismatch) linearity on a PAM signal in Eye mode.
+<h2>Linearity Definition</h2>
+<p>The <code>:MEASure:EYE:PAM:LINearity:DEFinition</code> command selects the algorithm
+used to measure PAM level linearity in Eye mode. Linearity describes how evenly the PAM
+signal levels are spaced; a value of 1.0 indicates equal separation between all levels.</p>
+
+<table>
+<tr><th>Definition</th><th>Algorithm</th><th>Waveforms</th></tr>
+<tr><td><code>RLMA120</code></td><td>RLM (Ratio Level Mismatch), IEEE 802.3 Annex 120D</td><td>NRZ, PAM4</td></tr>
+<tr><td><code>RLMC94</code></td><td>RLM (Ratio Level Mismatch), IEEE 802.3 Clause 94 (default)</td><td>NRZ, PAM4, PAM6, PAM8</td></tr>
+<tr><td><code>EYE</code></td><td>Eye Linearity, OIF CEI 4.0</td><td>NRZ, PAM4, PAM6, PAM8</td></tr>
+</table>
+
+<h3>RLM (Annex 120D) &mdash; RLMA120</h3>
+<p>Based on the four mean signal levels V0&ndash;V3, normalized with the mid-range level
+Vmid = (V0 + V3) / 2, and the effective symbol levels:</p>
+<pre>ES1 = (V1 - Vmid) / (V0 - Vmid)
+ES2 = (V2 - Vmid) / (V3 - Vmid)
+RLM = min(3xES1, 3xES2, 2-3xES1, 2-3xES2)</pre>
+<p>The 2-3xES terms penalize both level compression and over-spacing, making this the
+most rigorous definition.</p>
+
+<h3>RLM (Clause 94) &mdash; RLMC94</h3>
+<p>Based on the smallest of the three eye heights, normalized to one third of the full
+swing:</p>
+<pre>RLM = 3 x min(eye heights) / (V3 - V0)</pre>
+<p>This definition penalizes only the most compressed eye.</p>
+
+<h3>Eye Linearity (CEI 4.0) &mdash; EYE</h3>
+<p>The ratio of the minimum to the maximum adjacent-level separation:</p>
+<pre>Eye linearity = min(dV_low, dV_mid, dV_upp) / max(dV_low, dV_mid, dV_upp)</pre>
+
+<h2>Parameters</h2>
+<pre>{RLMA120 | RLMC94 | EYE}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>RLMA120</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:EYE:LIST:CLEar
+:MEASure:EYE:PAM:LINearity:SOURce FUNC1
+:MEASure:EYE:PAM:LINearity:DEFinition RLMC94
+:MEASure:EYE:PAM:LINearity:DEFinition?
+:MEASure:EYE:PAM:LINearity
+:MEASure:EYE:PAM:LINearity?
+:MEASure:EYE:PAM:LINearity:DEFinition RLMA120
+:MEASure:EYE:PAM:LINearity:DEFinition?
+:MEASure:EYE:PAM:LINearity
+:MEASure:EYE:PAM:LINearity?
+:MEASure:EYE:PAM:LINearity:DEFinition EYE
+:MEASure:EYE:PAM:LINearity:DEFinition?
+:MEASure:EYE:PAM:LINearity
+:MEASure:EYE:PAM:LINearity?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="eye_pam_linearity.html">:MEASure:EYE:PAM:LINearity</a></li>
+<li><a href="eye_pam_linearity_source.html">:MEASure:EYE:PAM:LINearity:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:PNMargin:SIDe</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:PNMargin:SIDe</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:EYE:PNMargin:SIDe {LEFT | RIGHt}</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:PNMargin:SIDe?</pre>
+<h2>Description</h2>
+<p>Selects the side of the waveform on which to perform the Partial Noise Margin measurement (:MEASure:EYE:PNMARgin). The default setting is LEFT.</p>
+<h2>Parameters</h2>
+<pre>{LEFT | RIGHt}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>{LEFT | RIGH}</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:EYE:LIST:CLEar
+:MEASure:EYE:PNMargin:SOURce FUNC2
+:MEASure:EYE:PNMargin:SIDe RIGHt
+:MEASure:EYE:PNMargin:SIDe?
+:MEASure:EYE:PNMargin:EYE EYE0
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?
+:MEASure:EYE:PNMargin:EYE EYE1
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?
+:MEASure:EYE:PNMargin:EYE EYE2
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?
+
+:MEASure:EYE:PNMargin:SIDe LEFT
+:MEASure:EYE:PNMargin:SIDe?
+:MEASure:EYE:PNMargin:EYE EYE0
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?
+:MEASure:EYE:PNMargin:EYE EYE1
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?
+:MEASure:EYE:PNMargin:EYE EYE2
+:MEASure:EYE:PNMargin:EYE?
+:MEASure:EYE:PNMargin
+:MEASure:EYE:PNMargin?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="eye_pnmargin.html">:MEASure:EYE:PNMargin</a></li>
+<li><a href="eye_pnmargin_eye.html">:MEASure:EYE:PNMargin:EYE</a></li>
+<li><a href="eye_pnmargin_source.html">:MEASure:EYE:PNMargin:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

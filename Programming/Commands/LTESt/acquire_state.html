@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:LTESt:ACQuire:STATe</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:LTESt:ACQuire:STATe</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; LTESt Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:LTESt:ACQuire:STATe {ON | OFF | 1 | 0}</pre>
+<h2>Query Syntax</h2>
+<pre>:LTESt:ACQuire:STATe?</pre>
+<h2>Description</h2>
+<p>Enables acquisition limit testing. The actual test is started by placing the G2004A software in run mode (:ACQuire:RUN). You must use the :ACQuire:RUN command to start continuous sweeps and so begin the test</p>
+<h2>Parameters</h2>
+<pre>{ON | OFF | 1 | 0}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Typical Return Value</td><td><code>LTESt</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:LTESt:ACQuire:CTYPe:PATTerns 3
+:LTESt:ACQuire:CTYPe:PATTerns?
+:LTESt:ACQuire:STATe ON
+:LTESt:ACQuire:STATe?
+:ACQuire:RUN
+*OPC?
+:MEASure:LTESt:ACQuire:COUNt?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="acquire_ctype.html">:LTESt:ACQuire:CTYPe</a></li>
+<li><a href="acquire_ctype_patterns.html">:LTESt:ACQuire:CTYPe:PATTerns</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">LTESt Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:SPRocess{1:4}:TEQualizer:PRESets</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:SPRocess{1:4}:TEQualizer:PRESets</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; SPRocess Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:SPRocess{1:4}:TEQualizer:PRESets &lt;string&gt;</pre>
+<h2>Description</h2>
+Loads a previously saved a preset for the TDECQ Equalizer operator The preset configures the operator to your saved settings.<br>
+• IEEE 802.3bs<br>
+• IEEE 802.3cd<br>
+• IEEE 802.3bs Amended<br>
+• IEEE 802.3dj Draft 2.0
+<h2>TDECQ Equalizer Presets</h2>
+<p>The <code>:SPRocess:TEQualizer:PRESets</code> command loads a saved preset that
+configures the TDECQ reference equalizer. Each preset applies the reference receiver
+and equalizer settings defined by a specific IEEE 802.3 Ethernet PAM4 standard.</p>
+
+<p>The presets differ primarily in the signaling rate (baud rate) they target, which in
+turn determines the reference receiver bandwidth and the feed-forward equalizer (FFE)
+tap configuration. The baud rate itself is determined by the acquired signal and the
+clock recovery, not by the preset.</p>
+
+<table>
+<tr><th>Preset</th><th>Standard</th><th>Baud Rate</th><th>Nominal Lane Rate</th></tr>
+<tr><td><code>IEEE 802.3cd</code></td><td>802.3cd (2018)</td><td>26.5625 / 53.125 GBd</td><td>50G / 100G per lane</td></tr>
+<tr><td><code>IEEE 802.3bs</code></td><td>802.3bs (2017)</td><td>26.5625 / 53.125 GBd</td><td>50G / 100G per lane</td></tr>
+<tr><td><code>IEEE 802.3bs Amended</code></td><td>802.3bs (amended)</td><td>26.5625 / 53.125 GBd</td><td>50G / 100G per lane</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.0</code></td><td>802.3dj (draft)</td><td>106.25 GBd</td><td>200G per lane</td></tr>
+</table>
+
+<h3>Key Differences</h3>
+<ul>
+<li><strong>Baud rate</strong>: the dominant difference. PAM4 baud rates double through
+the standards: 26.5625 GBd (50G/lane), 53.125 GBd (100G/lane, e.g. 400GBASE-DR4), and
+106.25 GBd (200G/lane). IEEE 802.3bs and 802.3cd cover 26.5625 GBd and 53.125 GBd, while
+IEEE 802.3dj covers 106.25 GBd. Each doubling halves the unit interval: 37.65 ps, 18.82 ps,
+and 9.41 ps respectively.</li>
+<li><strong>Reference receiver bandwidth</strong>: a Bessel-Thomson filter whose 3 dB
+bandwidth is defined as a fraction of the baud rate (typically &asymp; 0.75 &times; baud),
+so it scales automatically with the measured baud rate. A single preset therefore covers
+each standard across its baud rates.</li>
+<li><strong>Equalizer</strong>: a feed-forward equalizer (FFE); the tap count, main-tap
+position, and tap limits are defined per standard and are refined in later standards.</li>
+<li><strong>Target SER</strong>: the symbol error ratio used for the TDECQ noise
+threshold, typically 4.8 &times; 10<sup>-4</sup>.</li>
+</ul>
+
+<p>Select the preset that matches the transmitter under test: use <code>IEEE 802.3cd</code>
+or <code>IEEE 802.3bs</code> for 50G/lane and 100G/lane optics, and
+<code>IEEE 802.3dj Draft 2.0</code> for 200G/lane (800G / 1.6T) optics.</p>
+<h2>Parameters</h2>
+<pre>&lt;string&gt;</pre>
+<h2>Programming Example</h2>
+<pre>:SPRocess1:TEQualizer:PRESets "IEEE 802.3bs"
+:SPRocess1:TEQualizer:PRESets?
+:SPRocess1:TEQualizer:PRESets "IEEE 802.3dj Draft 2.0"
+:SPRocess1:TEQualizer:PRESets?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="tequalizer_presets_selections.html">:SPRocess:TEQualizer:PRESets:SELections?</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">SPRocess Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

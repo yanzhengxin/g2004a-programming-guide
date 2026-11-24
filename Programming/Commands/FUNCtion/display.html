@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:FUNCtion{1:4}:DISPlay</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:FUNCtion{1:4}:DISPlay</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; FUNCtion Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:FUNCtion{1:4}:DISPlay {ON | OFF | 1 | 0}</pre>
+<h2>Query Syntax</h2>
+<pre>:FUNCtion{1:4}:DISPlay?</pre>
+<h2>Description</h2>
+<p>Displays or hides the indicated function waveform.</p>
+<h2>Parameters</h2>
+<pre>{ON | OFF | 1 | 0}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII integer (int, boolean)</td></tr><tr><td>Typical Return Value</td><td><code>1 (on) or 0 (off)</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:Function2:DISPlay ON
+:Function1:DISPlay ON
+:Function2:COLor TCOLor14
+:Function1:COLor TCOLor2
+:Function2:COLor TCOLor7
+:FUNCtion2:COLor TCOLor6</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="color.html">:FUNCtion{1:4}:COLor</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">FUNCtion Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

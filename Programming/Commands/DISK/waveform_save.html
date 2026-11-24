@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:DISK:WAVeform:SAVE</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:DISK:WAVeform:SAVE</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; DISK Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:DISK:WAVeform:SAVE</pre>
+<h2>Description</h2>
+<p>Saves a single-valued waveform to a file. Use the :DISK:WAVeform:FNAMe command to specify the file name and the :DISK:WAVeform:SAVE:FTYPe command to specify one of the following two waveform file types:<br>
+• Pattern format waveform (.csv)<br>
+• Y-value format waveform (.txt)</p>
+<h2>Programming Example</h2>
+<pre>:DISK:WAVeform:FNAMe "C:\Users\admin\AppData\Local\Temp\g2004a_wave\Waveform_2026-11-13_1.csv"
+:DISK:WAVeform:SAVE:SOURce CHAN1B
+:DISK:WAVeform:SAVE
+:DISK:WAVeform:FNAMe "C:\Users\admin\AppData\Local\Temp\g2004a_wave\Waveform_2026-11-13_2.csv"
+:DISK:WAVeform:SAVE:SOURce FUNC2
+:DISK:WAVeform:SAVE</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="waveform_fname.html">:DISK:WAVeform:FNAMe</a></li>
+<li><a href="waveform_save_ftype.html">:DISK:WAVeform:SAVE:FTYPe</a></li>
+<li><a href="waveform_save_source.html">:DISK:WAVeform:SAVE:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">DISK Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

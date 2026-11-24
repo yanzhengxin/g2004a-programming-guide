@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:OER</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:OER</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:EYE:OER</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:OER?</pre>
+<h2>Description</h2>
+<p>The PAM Outer Extinction Ratio measurement is a PAM4 measurements,</p>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII float (unit determined by UNITs)</td></tr><tr><td>Typical Return Value</td><td><code>6.0</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:EYE:LIST:CLEar
+:MEASure:EYE:OER:SOURce FUNC2
+:MEASure:EYE:OER:UNITs DECibel
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?
+:MEASure:EYE:OER:UNITs RATio
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?
+:MEASure:EYE:OER:UNITs PERCent
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="eye_apower.html">:MEASure:EYE:APOWer</a></li>
+<li><a href="eye_ceq.html">:MEASure:EYE:CEQ</a></li>
+<li><a href="eye_cnmargin.html">:MEASure:EYE:CNMargin</a></li>
+<li><a href="eye_ctdecq.html">:MEASure:EYE:CTDecq</a></li>
+<li><a href="eye_nmargin.html">:MEASure:EYE:NMARgin</a></li>
+<li><a href="eye_ooma.html">:MEASure:EYE:OOMA</a></li>
+<li><a href="eye_pnmargin.html">:MEASure:EYE:PNMargin</a></li>
+<li><a href="eye_pser.html">:MEASure:EYE:PSER</a></li>
+<li><a href="eye_ptdeq.html">:MEASure:EYE:PTDeq</a></li>
+<li><a href="eye_tdeq.html">:MEASure:EYE:TDEQ</a></li>
+<li><a href="eye_ttime.html">:MEASure:EYE:TTIMe</a></li>
+<li><a href="eye_apower_source.html">:MEASure:EYE:APOWer:SOURce</a></li>
+<li><a href="eye_apower_units.html">:MEASure:EYE:APOWer:UNITs</a></li>
+<li><a href="eye_ceq_source.html">:MEASure:EYE:CEQ:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

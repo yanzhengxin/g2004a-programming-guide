@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:EYE:OER:UNITs</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:EYE:OER:UNITs</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:EYE:OER:UNITs {DECibel | PERCent | RATio}</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:EYE:OER:UNITs?</pre>
+<h2>Description</h2>
+Set or query the result unit of Outer extinction ratio.
+<h2>OER Unit Conversion</h2>
+<p>The <code>:MEASure:EYE:OER:UNITs</code> command selects the units of the Outer
+Extinction Ratio (OER) measurement. OER is the ratio of the average optical power of the
+highest PAM level (P3) to the average power of the lowest level (P0), measured on the
+PRBS13Q or SSPRQ test pattern:</p>
+
+<pre>OER = P3 / P0</pre>
+
+<table>
+<tr><th>Unit</th><th>Formula</th><th>Direction</th></tr>
+<tr><td><code>RATio</code></td><td>P3 / P0 (linear)</td><td>higher is better</td></tr>
+<tr><td><code>DECibel</code></td><td>10 x log10(P3 / P0)</td><td>higher is better</td></tr>
+<tr><td><code>PERCent</code></td><td>100 x (P0 / P3) = 100 / ratio</td><td>lower is better</td></tr>
+</table>
+
+<p>Conversions between the units:</p>
+
+<pre>dB = 10 x log10(ratio)
+ratio = 10^(dB/10)
+percent = 100 / ratio = 100 / 10^(dB/10)</pre>
+
+<p>For example, OER = 3.0 dB equals a linear ratio of 2.0 and a percent value of 50%.
+Note that RATio and DECibel increase with better extinction, while PERCent decreases.</p>
+<h2>Parameters</h2>
+<pre>{DECibel | PERCent | RATio}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>DECibel</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:EYE:LIST:CLEar
+:MEASure:EYE:OER:SOURce FUNC2
+:MEASure:EYE:OER:UNITs DECibel
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?
+:MEASure:EYE:OER:UNITs RATio
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?
+:MEASure:EYE:OER:UNITs PERCent
+:MEASure:EYE:OER:UNITs?
+:MEASure:EYE:OER
+:MEASure:EYE:OER?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="eye_oer.html">:MEASure:EYE:OER</a></li>
+<li><a href="eye_oer_source.html">:MEASure:EYE:OER:SOURce</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Command Reference</title>
+<link rel="stylesheet" href="../../styles/styles.css" />
+</head>
+<body>
+<h1>Command Reference</h1>
+<p class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../a_introduction.html">Programming Introduction</a> &rsaquo; Command Reference</p>
+<p>This chapter lists all 139 SCPI commands supported by the G2004A optical sampling oscilloscope, organized by subsystem. Use the command groups below to locate a command, or use the Contents and Index tabs of this help file to browse and search.</p>
+<h2>SCPI Command Nodes</h2>
+<table><tr><th>Subsystem</th><th>SCPI Node</th><th>Commands</th><th>Description</th></tr>
+<tr><td><a href="Common/a_introduction.html">Common</a></td><td><code>IEEE 488.2</code></td><td>3</td><td>Common Commands</td></tr>
+<tr><td><a href="ACQuire/a_introduction.html">ACQuire</a></td><td><code>:ACQuire</code></td><td>4</td><td>Acquisition</td></tr>
+<tr><td><a href="CHANnel/a_introduction.html">CHANnel</a></td><td><code>:CHANnel</code></td><td>13</td><td>Channel</td></tr>
+<tr><td><a href="DISK/a_introduction.html">DISK</a></td><td><code>:DISK</code></td><td>7</td><td>Disk / File</td></tr>
+<tr><td><a href="DISPlay/a_introduction.html">DISPlay</a></td><td><code>:DISPlay</code></td><td>5</td><td>Display</td></tr>
+<tr><td><a href="FUNCtion/a_introduction.html">FUNCtion</a></td><td><code>:FUNCtion</code></td><td>2</td><td>Function</td></tr>
+<tr><td><a href="LTESt/a_introduction.html">LTESt</a></td><td><code>:LTESt</code></td><td>3</td><td>Limit Test</td></tr>
+<tr><td><a href="MEASure/a_introduction.html">MEASure</a></td><td><code>:MEASure</code></td><td>92</td><td>Measurement</td></tr>
+<tr><td><a href="SLOT/a_introduction.html">SLOT</a></td><td><code>:SLOT</code></td><td>5</td><td>Slot / Trigger Input</td></tr>
+<tr><td><a href="SPRocess/a_introduction.html">SPRocess</a></td><td><code>:SPRocess</code></td><td>2</td><td>Signal Processing</td></tr>
+<tr><td><a href="SYSTem/a_introduction.html">SYSTem</a></td><td><code>:SYSTem</code></td><td>3</td><td>System</td></tr>
+</table>
+<div class="group-box"><h3>Common Subsystem &mdash; Common Commands Commands</h3><ul class="tight cmd-list">
+<li><a href="Common/idn.html">*IDN?</a></li>
+<li><a href="Common/opc.html">*OPC?</a></li>
+<li><a href="Common/rst.html">*RST</a></li>
+</ul></div>
+<div class="group-box"><h3>ACQuire Subsystem &mdash; Acquisition Commands</h3><ul class="tight cmd-list">
+<li><a href="ACQuire/cdisplay.html">:ACQuire:CDISplay</a></li>
+<li><a href="ACQuire/run.html">:ACQuire:RUN</a></li>
+<li><a href="ACQuire/single.html">:ACQuire:SINGle</a></li>
+<li><a href="ACQuire/stop.html">:ACQuire:STOP</a></li>
+</ul></div>
+<div class="group-box"><h3>CHANnel Subsystem &mdash; Channel Commands</h3><ul class="tight cmd-list">
+<li><a href="CHANnel/color.html">:CHANnel{1}{A|B|C|D}:COLor</a></li>
+<li><a href="CHANnel/display.html">:CHANnel{1}{A|B|C|D}:DISPlay</a></li>
+<li><a href="CHANnel/sirc.html">:CHANnel{1}{A|B|C|D}:SIRC</a></li>
+<li><a href="CHANnel/attenuator_decibels.html">:CHANnel{1}{A|B|C|D}:ATTenuator:DECibels</a></li>
+<li><a href="CHANnel/attenuator_ratio.html">:CHANnel{1}{A|B|C|D}:ATTenuator:RATio</a></li>
+<li><a href="CHANnel/attenuator_reset.html">:CHANnel{1}{A|B|C|D}:ATTenuator:RESet</a></li>
+<li><a href="CHANnel/attenuator_state.html">:CHANnel{1}{A|B|C|D}:ATTenuator:STATe</a></li>
+<li><a href="CHANnel/sirc_fbandwidth.html">:CHANnel{1}{A|B|C|D}:SIRC:FBANdwidth</a></li>
+<li><a href="CHANnel/transducer_gain.html">:CHANnel{1}{A|B|C|D}:TRANsducer:GAIN</a></li>
+<li><a href="CHANnel/transducer_invert.html">:CHANnel{1}{A|B|C|D}:TRANsducer:INVert</a></li>
+<li><a href="CHANnel/transducer_offset.html">:CHANnel{1}{A|B|C|D}:TRANsducer:OFFSet</a></li>
+<li><a href="CHANnel/transducer_state.html">:CHANnel{1}{A|B|C|D}:TRANsducer:STATe</a></li>
+<li><a href="CHANnel/transducer_units.html">:CHANnel{1}{A|B|C|D}:TRANsducer:UNITs</a></li>
+</ul></div>
+<div class="group-box"><h3>DISK Subsystem &mdash; Disk / File Commands</h3><ul class="tight cmd-list">
+<li><a href="DISK/simage_fname.html">:DISK:SIMage:FNAMe</a></li>
+<li><a href="DISK/simage_save.html">:DISK:SIMage:SAVE</a></li>
+<li><a href="DISK/waveform_fname.html">:DISK:WAVeform:FNAMe</a></li>
+<li><a href="DISK/waveform_save.html">:DISK:WAVeform:SAVE</a></li>
+<li><a href="DISK/simage_fname_aupdate.html">:DISK:SIMage:FNAMe:AUPDate</a></li>
+<li><a href="DISK/waveform_save_ftype.html">:DISK:WAVeform:SAVE:FTYPe</a></li>
+<li><a href="DISK/waveform_save_source.html">:DISK:WAVeform:SAVE:SOURce</a></li>
+</ul></div>
+<div class="group-box"><h3>DISPlay Subsystem &mdash; Display Commands</h3><ul class="tight cmd-list">
+<li><a href="DISPlay/tsmode.html">:DISPlay:TSMode</a></li>
+<li><a href="DISPlay/uiscaling.html">:DISPlay:UISCaling</a></li>
+<li><a href="DISPlay/window_results_rvmode.html">:DISPlay:WINDow:RESults:RVMode</a></li>
+<li><a href="DISPlay/window_time_dmode.html">:DISPlay:WINDow:TIME{1}:DMODe</a></li>
+<li><a href="DISPlay/window_time_zsignal.html">:DISPlay:WINDow:TIME{1}:ZSIGnal</a></li>
+</ul></div>
+<div class="group-box"><h3>FUNCtion Subsystem &mdash; Function Commands</h3><ul class="tight cmd-list">
+<li><a href="FUNCtion/color.html">:FUNCtion{1:4}:COLor</a></li>
+<li><a href="FUNCtion/display.html">:FUNCtion{1:4}:DISPlay</a></li>
+</ul></div>
+<div class="group-box"><h3>LTESt Subsystem &mdash; Limit Test Commands</h3><ul class="tight cmd-list">
+<li><a href="LTESt/acquire_ctype.html">:LTESt:ACQuire:CTYPe</a></li>
+<li><a href="LTESt/acquire_state.html">:LTESt:ACQuire:STATe</a></li>
+<li><a href="LTESt/acquire_ctype_patterns.html">:LTESt:ACQuire:CTYPe:PATTerns</a></li>
+</ul></div>
+<div class="group-box"><h3>MEASure Subsystem &mdash; Measurement Commands</h3><ul class="tight cmd-list">
+<li><a href="MEASure/amplitude_rinoise.html">:MEASure:AMPLitude:RINoise</a></li>
+<li><a href="MEASure/eye_apower.html">:MEASure:EYE:APOWer</a></li>
+<li><a href="MEASure/eye_ceq.html">:MEASure:EYE:CEQ</a></li>
+<li><a href="MEASure/eye_cnmargin.html">:MEASure:EYE:CNMargin</a></li>
+<li><a href="MEASure/eye_ctdecq.html">:MEASure:EYE:CTDecq</a></li>
+<li><a href="MEASure/eye_nmargin.html">:MEASure:EYE:NMARgin</a></li>
+<li><a href="MEASure/eye_oer.html">:MEASure:EYE:OER</a></li>
+<li><a href="MEASure/eye_ooma.html">:MEASure:EYE:OOMA</a></li>
+<li><a href="MEASure/eye_pnmargin.html">:MEASure:EYE:PNMargin</a></li>
+<li><a href="MEASure/eye_pser.html">:MEASure:EYE:PSER</a></li>
+<li><a href="MEASure/eye_ptdeq.html">:MEASure:EYE:PTDeq</a></li>
+<li><a href="MEASure/eye_tdeq.html">:MEASure:EYE:TDEQ</a></li>
+<li><a href="MEASure/eye_ttime.html">:MEASure:EYE:TTIMe</a></li>
+<li><a href="MEASure/tdeq_presets.html">:MEASure:TDEQ:PRESets</a></li>
+<li><a href="MEASure/eye_apower_source.html">:MEASure:EYE:APOWer:SOURce</a></li>
+<li><a href="MEASure/eye_apower_units.html">:MEASure:EYE:APOWer:UNITs</a></li>
+<li><a href="MEASure/eye_ceq_source.html">:MEASure:EYE:CEQ:SOURce</a></li>
+<li><a href="MEASure/eye_cnmargin_source.html">:MEASure:EYE:CNMargin:SOURce</a></li>
+<li><a href="MEASure/eye_ctdecq_source.html">:MEASure:EYE:CTDecq:SOURce</a></li>
+<li><a href="MEASure/eye_list_clear.html">:MEASure:EYE:LIST:CLEar</a></li>
+<li><a href="MEASure/eye_list_remove.html">:MEASure:EYE:LIST:REMove</a></li>
+<li><a href="MEASure/eye_list_select.html">:MEASure:EYE:LIST:SELect</a></li>
+<li><a href="MEASure/eye_nmargin_source.html">:MEASure:EYE:NMARgin:SOURce</a></li>
+<li><a href="MEASure/eye_oer_source.html">:MEASure:EYE:OER:SOURce</a></li>
+<li><a href="MEASure/eye_oer_units.html">:MEASure:EYE:OER:UNITs</a></li>
+<li><a href="MEASure/eye_ooma_source.html">:MEASure:EYE:OOMA:SOURce</a></li>
+<li><a href="MEASure/eye_ooma_units.html">:MEASure:EYE:OOMA:UNITs</a></li>
+<li><a href="MEASure/eye_pam_eheight.html">:MEASure:EYE:PAM:EHEight</a></li>
+<li><a href="MEASure/eye_pam_elevel.html">:MEASure:EYE:PAM:ELEVel</a></li>
+<li><a href="MEASure/eye_pam_eskew.html">:MEASure:EYE:PAM:ESKew</a></li>
+<li><a href="MEASure/eye_pam_ewidth.html">:MEASure:EYE:PAM:EWIDth</a></li>
+<li><a href="MEASure/eye_pam_level.html">:MEASure:EYE:PAM:LEVel</a></li>
+<li><a href="MEASure/eye_pam_linearity.html">:MEASure:EYE:PAM:LINearity</a></li>
+<li><a href="MEASure/eye_pam_overshoot.html">:MEASure:EYE:PAM:OVERshoot</a></li>
+<li><a href="MEASure/eye_pam_pmax.html">:MEASure:EYE:PAM:PMAX</a></li>
+<li><a href="MEASure/eye_pam_pmin.html">:MEASure:EYE:PAM:PMIN</a></li>
+<li><a href="MEASure/eye_pam_pp.html">:MEASure:EYE:PAM:PP</a></li>
+<li><a href="MEASure/eye_pam_ppamplitude.html">:MEASure:EYE:PAM:PPAMplitude</a></li>
+<li><a href="MEASure/eye_pam_rms.html">:MEASure:EYE:PAM:RMS</a></li>
+<li><a href="MEASure/eye_pam_skew.html">:MEASure:EYE:PAM:SKEW</a></li>
+<li><a href="MEASure/eye_pam_tpexcursion.html">:MEASure:EYE:PAM:TPEXcursion</a></li>
+<li><a href="MEASure/eye_pam_undershoot.html">:MEASure:EYE:PAM:UNDershoot</a></li>
+<li><a href="MEASure/eye_pam_veclosure.html">:MEASure:EYE:PAM:VECLosure</a></li>
+<li><a href="MEASure/eye_pnmargin_eye.html">:MEASure:EYE:PNMargin:EYE</a></li>
+<li><a href="MEASure/eye_pnmargin_side.html">:MEASure:EYE:PNMargin:SIDe</a></li>
+<li><a href="MEASure/eye_pnmargin_source.html">:MEASure:EYE:PNMargin:SOURce</a></li>
+<li><a href="MEASure/eye_pser_eye.html">:MEASure:EYE:PSER:EYE</a></li>
+<li><a href="MEASure/eye_pser_side.html">:MEASure:EYE:PSER:SIDe</a></li>
+<li><a href="MEASure/eye_pser_source.html">:MEASure:EYE:PSER:SOURce</a></li>
+<li><a href="MEASure/eye_ptdeq_eye.html">:MEASure:EYE:PTDeq:EYE</a></li>
+<li><a href="MEASure/eye_ptdeq_side.html">:MEASure:EYE:PTDeq:SIDe</a></li>
+<li><a href="MEASure/eye_ptdeq_source.html">:MEASure:EYE:PTDeq:SOURce</a></li>
+<li><a href="MEASure/eye_tdeq_source.html">:MEASure:EYE:TDEQ:SOURce</a></li>
+<li><a href="MEASure/eye_tdeq_status.html">:MEASure:EYE:TDEQ:STATus?</a></li>
+<li><a href="MEASure/eye_ttime_source.html">:MEASure:EYE:TTIMe:SOURce</a></li>
+<li><a href="MEASure/eye_ttime_transition.html">:MEASure:EYE:TTIMe:TRANsition</a></li>
+<li><a href="MEASure/ltest_acquire_count.html">:MEASure:LTESt:ACQuire:COUNt?</a></li>
+<li><a href="MEASure/pam_amplitude_units.html">:MEASure:PAM:AMPLitude:UNITs</a></li>
+<li><a href="MEASure/tdeq_presets_selections.html">:MEASure:TDEQ:PRESets:SELections?</a></li>
+<li><a href="MEASure/eye_pam_eheight_eye.html">:MEASure:EYE:PAM:EHEight:EYE</a></li>
+<li><a href="MEASure/eye_pam_eheight_source.html">:MEASure:EYE:PAM:EHEight:SOURce</a></li>
+<li><a href="MEASure/eye_pam_elevel_eye.html">:MEASure:EYE:PAM:ELEVel:EYE</a></li>
+<li><a href="MEASure/eye_pam_elevel_source.html">:MEASure:EYE:PAM:ELEVel:SOURce</a></li>
+<li><a href="MEASure/eye_pam_eskew_eye.html">:MEASure:EYE:PAM:ESKew:EYE</a></li>
+<li><a href="MEASure/eye_pam_eskew_source.html">:MEASure:EYE:PAM:ESKew:SOURce</a></li>
+<li><a href="MEASure/eye_pam_ewidth_eye.html">:MEASure:EYE:PAM:EWIDth:EYE</a></li>
+<li><a href="MEASure/eye_pam_ewidth_source.html">:MEASure:EYE:PAM:EWIDth:SOURce</a></li>
+<li><a href="MEASure/eye_pam_level_level.html">:MEASure:EYE:PAM:LEVel:LEVel</a></li>
+<li><a href="MEASure/eye_pam_level_source.html">:MEASure:EYE:PAM:LEVel:SOURce</a></li>
+<li><a href="MEASure/eye_pam_linearity_definition.html">:MEASure:EYE:PAM:LINearity:DEFinition</a></li>
+<li><a href="MEASure/eye_pam_linearity_source.html">:MEASure:EYE:PAM:LINearity:SOURce</a></li>
+<li><a href="MEASure/eye_pam_overshoot_source.html">:MEASure:EYE:PAM:OVERshoot:SOURce</a></li>
+<li><a href="MEASure/eye_pam_pmax_source.html">:MEASure:EYE:PAM:PMAX:SOURce</a></li>
+<li><a href="MEASure/eye_pam_pmax_units.html">:MEASure:EYE:PAM:PMAX:UNITs</a></li>
+<li><a href="MEASure/eye_pam_pmin_source.html">:MEASure:EYE:PAM:PMIN:SOURce</a></li>
+<li><a href="MEASure/eye_pam_pmin_units.html">:MEASure:EYE:PAM:PMIN:UNITs</a></li>
+<li><a href="MEASure/eye_pam_pp_level.html">:MEASure:EYE:PAM:PP:LEVel</a></li>
+<li><a href="MEASure/eye_pam_pp_source.html">:MEASure:EYE:PAM:PP:SOURce</a></li>
+<li><a href="MEASure/eye_pam_ppamplitude_source.html">:MEASure:EYE:PAM:PPAMplitude:SOURce</a></li>
+<li><a href="MEASure/eye_pam_ppamplitude_units.html">:MEASure:EYE:PAM:PPAMplitude:UNITs</a></li>
+<li><a href="MEASure/eye_pam_rms_level.html">:MEASure:EYE:PAM:RMS:LEVel</a></li>
+<li><a href="MEASure/eye_pam_rms_source.html">:MEASure:EYE:PAM:RMS:SOURce</a></li>
+<li><a href="MEASure/eye_pam_skew_level.html">:MEASure:EYE:PAM:SKEW:LEVel</a></li>
+<li><a href="MEASure/eye_pam_skew_source.html">:MEASure:EYE:PAM:SKEW:SOURce</a></li>
+<li><a href="MEASure/eye_pam_tpexcursion_source.html">:MEASure:EYE:PAM:TPEXcursion:SOURce</a></li>
+<li><a href="MEASure/eye_pam_tpexcursion_units.html">:MEASure:EYE:PAM:TPEXcursion:UNITs</a></li>
+<li><a href="MEASure/eye_pam_undershoot_source.html">:MEASure:EYE:PAM:UNDershoot:SOURce</a></li>
+<li><a href="MEASure/eye_pam_veclosure_eye.html">:MEASure:EYE:PAM:VECLosure:EYE</a></li>
+<li><a href="MEASure/eye_pam_veclosure_source.html">:MEASure:EYE:PAM:VECLosure:SOURce</a></li>
+<li><a href="MEASure/pam_eye_time_units.html">:MEASure:PAM:EYE:TIME:UNITs</a></li>
+<li><a href="MEASure/eye_pam_eheight_define_eopening.html">:MEASure:EYE:PAM:EHEight:DEFine:EOPening</a></li>
+<li><a href="MEASure/eye_pam_ewidth_define_eopening.html">:MEASure:EYE:PAM:EWIDth:DEFine:EOPening</a></li>
+</ul></div>
+<div class="group-box"><h3>SLOT Subsystem &mdash; Slot / Trigger Input Commands</h3><ul class="tight cmd-list">
+<li><a href="SLOT/trigger_dcdratio.html">:SLOT{1}:TRIGger:DCDRatio</a></li>
+<li><a href="SLOT/trigger_mode.html">:SLOT{1}:TRIGger:MODe?</a></li>
+<li><a href="SLOT/trigger_plength.html">:SLOT{1}:TRIGger:PLENgth</a></li>
+<li><a href="SLOT/trigger_source.html">:SLOT{1}:TRIGger:SOURce</a></li>
+<li><a href="SLOT/trigger_srate.html">:SLOT{1}:TRIGger:SRATe</a></li>
+</ul></div>
+<div class="group-box"><h3>SPRocess Subsystem &mdash; Signal Processing Commands</h3><ul class="tight cmd-list">
+<li><a href="SPRocess/tequalizer_presets.html">:SPRocess{1:4}:TEQualizer:PRESets</a></li>
+<li><a href="SPRocess/tequalizer_presets_selections.html">:SPRocess:TEQualizer:PRESets:SELections?</a></li>
+</ul></div>
+<div class="group-box"><h3>SYSTem Subsystem &mdash; System Commands</h3><ul class="tight cmd-list">
+<li><a href="SYSTem/autoscale.html">:SYSTem:AUToscale</a></li>
+<li><a href="SYSTem/default.html">:SYSTem:DEFault</a></li>
+<li><a href="SYSTem/mode.html">:SYSTem:MODE</a></li>
+</ul></div>
+<p class="nav"><a href="../a_introduction.html">&larr; Back to Programming Introduction</a> &middot; <a href="../../index.html">Home</a></p>
+</body>
+</html>

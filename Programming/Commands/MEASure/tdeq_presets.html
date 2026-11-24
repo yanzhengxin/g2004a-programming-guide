@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:TDEQ:PRESets</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:TDEQ:PRESets</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:TDEQ:PRESets &lt;preset name&gt;</pre>
+<h2>Query Syntax</h2>
+<pre>:MEASure:TDEQ:PRESets?</pre>
+<h2>Description</h2>
+Loads a preset for a TDECQ measurement (:MEASure:EYE:TDECQ). The preset configures the measurement to the proper settings. To query which presets are available for loading, use the MEASure:TDEQ:PRESets:SELections? query<br>
+TDECQ Measurement Presets<br>
+• IEEE 802.3bs<br>
+• IEEE 802.3cd<br>
+• IEEE 802.3bs Amended<br>
+• IEEE 802.3dj Draft 2.3 DR (500m)<br>
+• IEEE 802.3dj Draft 2.3 FR4 (500m)<br>
+• IEEE 802.3dj Draft 2.3 DR (2km)<br>
+• IEEE 802.3dj Draft 2.3 FR4 (2km)<br>
+• IEEE 802.3dj Draft 2.3 LR4 (10km)
+<h2>TDECQ Measurement Presets</h2>
+<p>The <code>:MEASure:TDEQ:PRESets</code> command loads a saved preset that configures
+the TDECQ measurement (<code>:MEASure:EYE:TDEQ</code>). A preset sets the two measurement
+parameters defined by the target standard: the histogram width
+(<code>:MEASure:TDEQ:HWIDth</code>) and the target symbol error ratio
+(<code>:MEASure:TDEQ:TSER</code>). The reference equalizer (receiver bandwidth and FFE
+taps) is configured separately with <code>:SPRocess:TEQualizer:PRESets</code>.</p>
+
+<table>
+<tr><th>Preset</th><th>Standard</th><th>Baud Rate</th><th>Reach / PMD</th></tr>
+<tr><td><code>IEEE 802.3bs</code></td><td>802.3bs (2017)</td><td>26.5625 / 53.125 GBd</td><td>200G / 400G</td></tr>
+<tr><td><code>IEEE 802.3cd</code></td><td>802.3cd (2018)</td><td>26.5625 / 53.125 GBd</td><td>50G / 100G / 200G</td></tr>
+<tr><td><code>IEEE 802.3bs Amended</code></td><td>802.3bs (amended)</td><td>26.5625 / 53.125 GBd</td><td>400G (updated reference)</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.3 DR (500m)</code></td><td>802.3dj draft</td><td>106.25 GBd</td><td>DR, 500 m parallel fiber</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.3 FR4 (500m)</code></td><td>802.3dj draft</td><td>106.25 GBd</td><td>FR4, 500 m CWDM</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.3 DR (2km)</code></td><td>802.3dj draft</td><td>106.25 GBd</td><td>DR, 2 km parallel fiber</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.3 FR4 (2km)</code></td><td>802.3dj draft</td><td>106.25 GBd</td><td>FR4, 2 km CWDM</td></tr>
+<tr><td><code>IEEE 802.3dj Draft 2.3 LR4 (10km)</code></td><td>802.3dj draft</td><td>106.25 GBd</td><td>LR4, 10 km CWDM</td></tr>
+</table>
+
+<p>The 802.3dj presets are split by reach because the histogram width and target SER are
+tuned per PMD. DR (parallel single-mode fiber) and FR4 / LR4 (4-wavelength CWDM) operate
+over different distances (500 m, 2 km, 10 km), which introduce different amounts of
+chromatic dispersion. Select the preset that matches the reach of the transmitter under
+test.</p>
+<h2>Parameters</h2>
+<pre>&lt;preset name&gt;</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII string (str)</td></tr><tr><td>Typical Return Value</td><td><code>&lt;preset name&gt;</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:MEASure:TDEQ:PRESets "IEEE 802.3dj Draft 2.3 DR (2km)"
+:MEASure:TDEQ:PRESets?
+:MEASure:TDEQ:PRESets "IEEE 802.3dj Draft 2.3 DR (500m)"
+:MEASure:TDEQ:PRESets?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="tdeq_presets_selections.html">:MEASure:TDEQ:PRESets:SELections?</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

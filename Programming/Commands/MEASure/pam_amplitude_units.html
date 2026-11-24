@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:MEASure:PAM:AMPLitude:UNITs</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:MEASure:PAM:AMPLitude:UNITs</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; MEASure Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:MEASure:PAM:AMPLitude:UNITs {AMPLitude | PERCent}</pre>
+<h2>Description</h2>
+Sets the amplitude units for PAM4 level and level RMS (thickness) measurements.<br>
+The following measurements are affected by this setting:<br>
+<br>
+Eye Mode<br>
+• PAM Levels (:EYE:PAM:LEVel)<br>
+• PAM Levels RMS (:EYE:PAM:RMS)<br>
+• PAM Eye Levels (:EYE:PAM:ELEVel)<br>
+• PAM Eye Heights (:EYE:PAM:EHeight)
+<h2>Unit Conversion</h2>
+<p>The <code>AMPLitude</code> and <code>PERCent</code> settings express the same
+measurement in two different units. <code>AMPLitude</code> is an absolute value
+(volts for electrical, watts for optical), while <code>PERCent</code> is the value
+normalized to the full PAM4 signal swing:</p>
+
+<pre>PERCent (%) = (AMPLitude / full signal swing) x 100
+AMPLitude = PERCent (%) x full signal swing / 100</pre>
+
+<p>where the full signal swing is the peak-to-peak amplitude of the entire PAM4
+signal (highest level minus lowest level).</p>
+
+<p>For an electrical PAM4 signal with a 1 V full swing and equal level spacing:</p>
+
+<table>
+<tr><th>Level / Measurement</th><th>AMPLitude (V)</th><th>PERCent (%)</th></tr>
+<tr><td>L0 (lowest level)</td><td>0.000 V</td><td>0%</td></tr>
+<tr><td>L1</td><td>0.333 V</td><td>33.3%</td></tr>
+<tr><td>L2</td><td>0.667 V</td><td>66.7%</td></tr>
+<tr><td>L3 (highest level)</td><td>1.000 V</td><td>100%</td></tr>
+<tr><td>Eye height</td><td>0.333 V</td><td>33.3%</td></tr>
+</table>
+
+<p>To convert between the two units:</p>
+
+<pre>AMPLitude -> PERCent: divide by full swing, multiply by 100
+PERCent -> AMPLitude: multiply by full swing, divide by 100</pre>
+
+<p>Note: For an optical signal, AMPLitude is in watts (W). The PERCent value is
+always relative to the full signal swing, not to a single eye height — with equal
+PAM4 level spacing, one eye height is about 33.3% of the full swing.</p>
+<h2>Parameters</h2>
+<pre>{AMPLitude | PERCent}</pre>
+<h2>Programming Example</h2>
+<pre>:MEASure:PAM:AMPLitude:UNITs AMPLitude
+:MEASure:PAM:AMPLitude:UNITs?
+:MEASure:EYE:PAM:LEVel:LEVel LEVel1
+:MEASure:EYE:PAM:LEVel
+:MEASure:EYE:PAM:LEVel?
+:MEASure:EYE:PAM:RMS:LEVel LEVel1
+:MEASure:EYE:PAM:RMS
+:MEASure:EYE:PAM:RMS?
+:MEASure:EYE:PAM:ELEVel:EYE EYE0
+:MEASure:EYE:PAM:ELEVel
+:MEASure:EYE:PAM:ELEVel?
+:MEASure:EYE:PAM:EHeight:EYE EYE0
+:MEASure:EYE:PAM:EHeight
+:MEASure:EYE:PAM:EHeight?
+:MEASure:PAM:AMPLitude:UNITs PERCent
+:MEASure:PAM:AMPLitude:UNITs?
+:MEASure:EYE:PAM:LEVel?
+:MEASure:EYE:PAM:RMS?
+:MEASure:EYE:PAM:ELEVel?
+:MEASure:EYE:PAM:EHeight?</pre>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">MEASure Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

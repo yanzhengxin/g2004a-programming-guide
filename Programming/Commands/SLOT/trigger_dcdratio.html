@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:SLOT{1}:TRIGger:DCDRatio</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:SLOT{1}:TRIGger:DCDRatio</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; SLOT Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:SLOT{1}:TRIGger:DCDRatio {SUB2|SUB4|SUB8|SUB16|SUB32}</pre>
+<h2>Query Syntax</h2>
+<pre>:SLOT{1}:TRIGger:DCDRatio?</pre>
+<h2>Description</h2>
+<p>Enters the trigger-divide ratio. In some situations, you may need to enter a trigger divide ratio for a trigger that is a divided rate from the data rate.<br>
+| Rate | Argument |<br>
+| 1:2 (Sub-Rate) | SUB2 |<br>
+| 1:4 (Sub-Rate) | SUB4 |<br>
+| 1:8 (Sub-Rate) | SUB8 |<br>
+| 1:16 (Sub-Rate) | SUB16 |<br>
+| 1:32 (Sub-Rate) | SUB32 |</p>
+<h2>Parameters</h2>
+<pre>{SUB2|SUB4|SUB8|SUB16|SUB32}</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>{SUB2|SUB4|SUB8|SUB16|SUB32}</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:SLOT1:TRIGger:DCDRatio SUB8
+:SLOT1:TRIGger:DCDRatio?
+:SLOT1:TRIGger:SRATe 1.0625000E+11
+:SLOT1:TRIGger:SRATe?
+:SLOT1:TRIGger:PLENgth 65535
+:SLOT1:TRIGger:PLENgth?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="trigger_mode.html">:SLOT{1}:TRIGger:MODe?</a></li>
+<li><a href="trigger_plength.html">:SLOT{1}:TRIGger:PLENgth</a></li>
+<li><a href="trigger_source.html">:SLOT{1}:TRIGger:SOURce</a></li>
+<li><a href="trigger_srate.html">:SLOT{1}:TRIGger:SRATe</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">SLOT Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>

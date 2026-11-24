@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>:SLOT{1}:TRIGger:SOURce</title>
+<link rel="stylesheet" href="../../../styles/styles.css" />
+</head>
+<body>
+<h1>:SLOT{1}:TRIGger:SOURce</h1>
+<p class="breadcrumb"><a href="../../../index.html">Home</a> &rsaquo; <a href="../../../Programming/Commands/a_introduction.html">Command Reference</a> &rsaquo; SLOT Subsystem</p>
+<h2>Command Syntax</h2>
+<pre>:SLOT{1}:TRIGger:SOURce {FPANel }</pre>
+<h2>Query Syntax</h2>
+<pre>:SLOT{1}:TRIGger:SOURce?</pre>
+<h2>Description</h2>
+<p>Select the trigger input of the G2004 product's optical sampling oscilloscope.<br>
+• Front Panel. The DCA-M is being triggered from a clock that is input to theDCA-M's front-panel Clock In connector.<br>
+• Free Run. The DCA-M is triggered as soon as the trigger is armed, without having to provide an external trigger.</p>
+<h2>Parameters</h2>
+<pre>{FPANel }</pre>
+<h2>Return Value</h2>
+<table class="return-table"><tr><td>Return Type</td><td>ASCII enumeration string (str)</td></tr><tr><td>Typical Return Value</td><td><code>FPANel</code></td></tr></table>
+<h2>Programming Example</h2>
+<pre>:SLOT1:TRIGger:SOURce FPANel
+:SLOT1:TRIGger:SOURce?</pre>
+<h2>Related Commands</h2><ul class="tight">
+<li><a href="trigger_dcdratio.html">:SLOT{1}:TRIGger:DCDRatio</a></li>
+<li><a href="trigger_mode.html">:SLOT{1}:TRIGger:MODe?</a></li>
+<li><a href="trigger_plength.html">:SLOT{1}:TRIGger:PLENgth</a></li>
+<li><a href="trigger_srate.html">:SLOT{1}:TRIGger:SRATe</a></li>
+</ul>
+<h2>More Information</h2><ul>
+<li><a href="../../../index.html">Home</a></li>
+<li><a href="../../../Programming/a_introduction.html">Programming Introduction</a></li>
+<li><a href="a_introduction.html">SLOT Subsystem</a></li>
+</ul>
+<p class="nav"><a href="../../../Programming/Commands/a_introduction.html">&larr; Back to Command Reference</a></p>
+</body>
+</html>
